@@ -1,0 +1,41 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=ISO-8859-8"> 
+<title>Addition Grid</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body onload="getRandomNumber()">
+	<table style="empty-cells:show; " border="1" rules="all" width="100%" >
+		<tr align="center">
+			<td></td>
+			<script type="text/javascript">
+			for(j=1;j<11;j++) {
+				document.write("<td id=\"r"+j+"\"></td>");
+			}
+			</script>
+		</tr>
+		<script type="text/javascript">
+			for(j=1;j<11;j++) {
+				document.write("<tr><td align=\"center\" id=\"r"+(j+10)+"\"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>")
+			}
+		</script>
+	</table>
+</body>
+
+<script>
+function getRandomNumber() {
+	for (i=1;i<21;i++){
+		$('#r'+i).html(getNumber());
+		//$('#r'+i).html(getNumber());
+	}
+}
+function getNumber() {
+        var minNumber = 11; 
+        var maxNumber = 99; 
+        var randomnumber = Math.floor(Math.random() * (maxNumber - minNumber + 1) + minNumber); 
+        return randomnumber;
+
+} 
+</script>
+</html>
